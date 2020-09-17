@@ -1,0 +1,256 @@
+\documentclass[a4paper, 11pt]{article}
+
+% Packages
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{anyfontsize}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{sectsty}
+\usepackage{multicol}
+
+\geometry{margin=0.75in}
+\pagenumbering{gobble}
+\raggedbottom
+\raggedright
+\sectionfont{\fontsize{13}{18}\selectfont}
+\subsectionfont{\fontsize{11}{18}\selectfont}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=myBlue}
+\urlstyle{same} 
+
+%Custom commands & environments
+\renewcommand{\arraystretch}{1.2}
+\definecolor{myBlue}{RGB}{0,102,204}
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{32}{60}}
+\makeatother
+
+\newenvironment{topSection}[4]{
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		{\HUGE #1} & {\large\color{myBlue} {#3}} \\
+		{\large\color{myBlue} #2} &  {#4} \\
+	\end{tabular*}
+}
+
+\newenvironment{eduSubSection}[5]{
+	\subsection*{#1}
+	\vspace{-6pt}	
+	\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+		#2 & #3 \\
+		#4 & #5 \\
+	\end{tabular*}
+}
+
+% Document
+\begin{document}
+	
+%==============================Adil Naqvi==============================%
+	
+	\begin{topSection}
+		{Adil Naqvi}
+		{\href{http://adilnaqvi.com}{adilnaqvi.com}}
+		{notadilnaqvi@gmail.com}
+		{(+92) 312 3456789}
+	\end{topSection}
+	
+	\vspace{6pt}
+	{\large{A programming enthusiast looking for excuses to write more code}}\\
+
+%===============================Education==============================%
+	
+	\section*{Education}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+
+	\begin{eduSubSection}
+		{Bachelor of Mechanical Engineering}
+		{National University of Sciences and Technology}
+		{Islamabad, Pakistan}
+		{CGPA 0.00/4.00}
+		{2015-2019}
+	\end{eduSubSection}
+	\vspace{-18pt}
+	\begin{eduSubSection}
+		{Minor in Computer Science}
+		{National University of Sciences and Technology}
+		{Islamabad, Pakistan}
+		{CGPA 0.00/4.00}
+		{2018-2019}
+	\end{eduSubSection}
+	\vspace{-18pt}
+	\begin{eduSubSection}
+		{Higher Secondary School Education}
+		{Government College University}
+		{Lahore, Pakistan}
+		{Grade 00.0\%}
+		{2013-2015}
+	\end{eduSubSection}
+
+%==============================Test Scores=============================%
+	
+	\vspace{-12pt}
+	\section*{Test Scores}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+
+	\begin{tabular}{@{}>{\RaggedRight} p{5.0cm}p{10cm}}
+	IELTS Academic & Overall band: 7.5 \\
+	GRE General & Quantitative: 162 $\vert$ Verbal: 157 $\vert$ Analytical Writing: 4.0 \\
+	\end{tabular}
+
+%============================Certifications============================%
+	
+	\vspace{-4pt}
+	\section*{Certifications}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+	\begin{tabular}{@{}>{\RaggedRight} p{17cm}}
+	Applied Data Science Specialization -- by IBM through Coursera {\footnotesize{\href{https://coursera.org/share/b4356b0878bdabace9d5fb8f0e1d6de3}{(Certificate)}}}\\
+	Python for Everybody Specialization -- by University of Michigan through Coursera {\footnotesize{\href{https://coursera.org/share/8a1bf24d4f31b014d65163016d413b37}{(Certificate)}}}\\
+	Microsoft Office Specialist Certification -- earned at MOS NUST {\footnotesize{\href{https://www.youracclaim.com/users/notadilnaqvi/badges}{(Badge)}}}
+	\end{tabular}
+	
+%================================Skills================================%
+	\vspace{-4pt}
+	\section*{Skills}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+
+	\subsection*{Competent in:}
+	\vspace{-12pt}
+    \begin{multicols}{2}
+	
+	\begin{itemize}
+		
+		\item Artificial intelligene
+			\vspace{-6pt}
+			\begin{itemize}
+			\item Deep learning
+			\item Genetic algorithms
+			\item Tenserflow
+			\end{itemize}
+		\item Data science
+			\vspace{-6pt}
+			\begin{itemize}
+			\item MySQL
+			\item Pandas
+			\item Matplotlib
+			\end{itemize}
+		\item Web development
+			\vspace{-6pt}
+			\begin{itemize}
+			\item Node
+			\item React
+			\item MongoDB
+			\end{itemize}
+		\item Other technologies
+			\vspace{-6pt}
+			\begin{itemize}
+			\item MATLAB
+			\item SolidWorks
+			\item \LaTeX
+			\end{itemize}
+		\end{itemize}
+    	\end{multicols}	
+		
+		\vspace{-22pt} %spacing is a bit funky here
+		\subsection*{Familiar with:}
+		\vspace{-12pt}
+    	\begin{multicols}{2}
+		\begin{itemize}
+			\item Data acquisition (LabView)
+			\item Circuit analysis (Proteus)
+			\item Static stress analysis (Ansys)
+		\end{itemize}
+    	\end{multicols}
+
+%===============================Projects===============================%
+	
+	\newpage
+	\vspace{-12pt}
+	\section*{Projects}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+
+	\subsection*{{Elo prediction} {\footnotesize\normalfont{\href{https://notadilnaqvi.github.io/elo-prediction}{(Demo)}}}}
+	\vspace{-6pt}
+	Approximated FIDE's chess Elo formula using a deep neural network modeled in Tensorflow. Achieved minumum MSE loss of 0.02
+	\vspace{-12pt}
+
+	\subsection*{Color classifier}
+	\vspace{-6pt}
+	Crowd-sourced and preprocessed data to train a Scikit-learn neural network to classify colors based on their RGB value. Achieved 92\% accuracy
+	\vspace{-12pt}
+
+	\subsection*{Pakistani food classifier}
+	\vspace{-6pt}
+	Used AutoML Vision by Google Cloud Platform to train a model to classify Pakistani food into 5 classes. Achieved 95\% precision with a confidence threshold of 0.6
+	\vspace{-12pt}
+	
+	\subsection*{Travelling salesman problem}
+	\vspace{-6pt}
+	Used genetic algorithm with mutation in MATLAB to solve the classic TSP. Achieved optimal path for a 20-city network within 15s
+
+%==============================Experience==============================%
+	
+	\vspace{-6pt}
+	\section*{Experience}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+
+	\subsection*{Mari Petroleum Company Limited}
+	\vspace{-6pt}
+	Intern $\vert$ Operations Department $\vert$ 8 weeks \\
+	Documented daily oil rig statistics and made “End of Well” report
+	\vspace{-12pt}
+
+	\subsection*{NUST Society of Mechanical Engineers}
+	\vspace{-6pt}
+	Director $\vert$ Graphics Department $\vert$ 1 year \\
+	Supervised the Graphics \& Media team to produce graphics and illustrations for numerous events
+
+%==========================Community Service===========================%
+	
+	\vspace{-6pt}
+	\section*{Community service}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+
+	\subsection*{Awareness drive}
+	\vspace{-6pt}
+	Conducted ``Water Conservation Awareness Drive'' at Army Public School, Islamabad amidst the Pakistan water crisis of 2019
+	\vspace{-12pt}
+
+	\subsection*{Wall of Kindness}
+	\vspace{-6pt}
+	Collected, cleaned, and distributed 100+ items of clothing to Wall of Kindness in Islamabad as a requirement fulfilment for Community Service course
+	\vspace{-12pt}
+
+	\subsection*{Blood donation drive}
+	\vspace{-6pt}
+	Conducted “Blood Donation Drive 2017” at NUST as a member of NUST Community Service Club
+	
+%==============================More to me==============================%
+
+	\vspace{-6pt}
+	\section*{More to me}
+	\vspace{-6pt}
+	\hrule
+	\vspace{12pt}
+	\justifying
+	Chess \hspace{1.75cm} Graphics designing \hspace{1.75cm} Casual reading \hspace{1.75cm} Recreational programming
+
+\end{document}
+
+% $\vert$ Listening: 9.0 $\vert$ Reading: 8.0 $\vert$ Writing: 5.5 $\vert$ Speaking: 7.0
+%{\textwidth}{l@{\extracolsep{\fill}}l}
